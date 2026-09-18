@@ -6,7 +6,11 @@ export const Header = () => {
       <header className="lg:px-16 px-4 flex flex-wrap items-center py-4 relative">
         <div className="flex-1 flex justify-between items-center mix-blend-screen">
           <a href="#" className="text-4xl text-cyan-400 font-extrabold">
-            <img src={logo} alt="logo" />
+            <img
+              src={logo}
+              alt="logo"
+              className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto"
+            />
           </a>
         </div>
 
