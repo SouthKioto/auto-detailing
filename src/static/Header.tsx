@@ -29,19 +29,14 @@ export const Header = () => {
             <nav>
               <ul className="md:flex items-center justify-between text-base text-gray-600 pt-4 md:pt-0">
                 <li>
-                  <a href="#" className="md:p-4 py-3 px-0 block">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="md:p-4 py-3 px-0 block">
-                    O nas
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="md:p-4 py-3 px-0 block md:mb-0 mb-2">
-                    Kontakt
-                  </a>
+                  <div className="-skew-x-12 rounded-md bg-linear-to-r from-cyan-600 to-cyan-950 p-0.5">
+                    <a
+                      href="#"
+                      className="block rounded-md bg-[#122130] text-white px-2 py-2 md:p-4"
+                    >
+                      Cennik
+                    </a>
+                  </div>
                 </li>
               </ul>
             </nav>
