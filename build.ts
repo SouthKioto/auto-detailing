@@ -16,9 +16,14 @@ const result = await Bun.build({
   sourcemap: "linked",
   define: {
     "process.env.NODE_ENV": JSON.stringify("production"),
+    "process.env.GOOGLE_MAPS_API_KEY": JSON.stringify(
+      process.env.GOOGLE_MAPS_API_KEY,
+    ),
   },
 });
 
 for (const output of result.outputs) {
-  console.log(` ${path.relative(process.cwd(), output.path)}  ${(output.size / 1024).toFixed(1)} KB`);
+  console.log(
+    ` ${path.relative(process.cwd(), output.path)}  ${(output.size / 1024).toFixed(1)} KB`,
+  );
 }
