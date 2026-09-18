@@ -46,7 +46,7 @@ export const Main = () => {
         <TitleBar title="O nas" marginTop="mt-10" />
         <AboutUs />
 
-        <TitleBar title="Gdzie możesz nas znaleźć?" marginTop="mt-10" />
+        <TitleBar title="Nasza lokalizacja" marginTop="mt-10" />
         <Map />
       </div>
     </>
