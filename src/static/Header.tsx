@@ -1,6 +1,10 @@
+import { Modal } from "@/components/Modal";
 import logo from "../img/LogoSm_Opacity.png";
+import { useState } from "react";
 
 export const Header = () => {
+  const [pricingOpen, setPricingOpen] = useState<boolean>(false);
+
   return (
     <div className="p-1 border-s w-full rounded-bl rounded-br shadow">
       <header className="lg:px-16 px-4 flex flex-wrap items-center py-4 relative">
@@ -50,12 +54,13 @@ export const Header = () => {
                   <a
                     href="#"
                     className="block text-center rounded-md bg-[#122130] text-cyan-500 px-2 py-2 md:p-4 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
+                    onClick={() => setPricingOpen(true)}
                   >
                     Cennik
                   </a>
                 </div>
               </li>
-              <li className="w-full md:w-auto px-4 md:px-0">
+              <li className="w-full md:w-auto px-4 md:px-0 hidden">
                 <div className="-skew-x-12 md:ml-3 rounded-md bg-linear-to-r from-cyan-600 to-cyan-950 p-0.5">
                   <a
                     href="#"
@@ -69,6 +74,12 @@ export const Header = () => {
           </nav>
         </div>
       </header>
+
+      <Modal
+        isOpen={pricingOpen}
+        onClose={() => setPricingOpen(false)}
+        title="Cennik"
+      />
     </div>
   );
 };

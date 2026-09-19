@@ -1,12 +1,13 @@
 export const AboutUs = () => {
   return (
     <section className="flex justify-center">
-      <div className="max-w-3xl p-5 sm:p-8 md:p-10 text-white">
+      <div className="max-w-3xl p-5 sm:p-8 md:p-10 text-gray-400">
+        {" "}
         <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-4 sm:mb-6">
+          {" "}
           Profesjonalny autodetailing – zadbamy o Twój samochód od środka i na
           zewnątrz
         </h2>
-
         <p className="text-base sm:text-lg mb-4">
           Zajmujemy się kompleksowym autodetailingiem, czyli{" "}
           <span className="underline font-bold">profesjonalną pielęgnacją</span>
@@ -16,7 +17,6 @@ export const AboutUs = () => {
           </span>
           .
         </p>
-
         <p className="text-base sm:text-lg mb-4">
           Dbamy o każdy detal, wykorzystując odpowiednie metody oraz wysokiej
           jakości produkty, aby przywrócić pojazdom świeżość, estetykę i
@@ -28,7 +28,6 @@ export const AboutUs = () => {
           wykonujemy profesjonalne pranie, usuwając zabrudzenia i odświeżając
           wnętrze samochodu.
         </p>
-
         <p className="text-base sm:text-lg mb-6">
           Zajmujemy się również detailingiem zewnętrznym, obejmującym
           kompleksową pielęgnację karoserii. Wykonujemy korekty lakieru, które
@@ -38,7 +37,6 @@ export const AboutUs = () => {
           Wykonujemy także polerowanie lamp, poprawiając ich wygląd i
           przywracając im przejrzystość.
         </p>
-
         <div className="mb-6">
           <p className="text-base sm:text-lg font-semibold mb-2">
             Nasze usługi:
@@ -54,7 +52,6 @@ export const AboutUs = () => {
             <li>💡 Polerowanie lamp</li>
           </ul>
         </div>
-
         <p className="text-base sm:text-lg">
           Do każdego samochodu{" "}
           <span className="underline font-bold">podchodzimy indywidualnie</span>
