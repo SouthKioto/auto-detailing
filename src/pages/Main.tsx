@@ -1,38 +1,51 @@
 import { AboutUs } from "@/components/AboutUs";
 import { Map } from "@/components/Map";
 import { Slider } from "@/components/Slider";
+import { SocialsBar } from "@/components/SocialsBar";
 import { TitleBar } from "@/components/TitleBar";
 import type { imagesProps } from "@/interfaces/imagesProps";
+
+import bmw1 from "../img/photos/bmw1.jpg";
+import bmw2 from "../img/photos/bmw2.jpg";
+import bmw3 from "../img/photos/bmw3.jpg";
+import volkswagen1 from "../img/photos/volkswagen1.jpg";
+import volkswagen2 from "../img/photos/volkswagen1.jpg";
+import volkswagen3 from "../img/photos/volkswagen3.jpg";
+import seat from "../img/photos/seat.jpg";
 
 const images: imagesProps[] = [
   {
     imageName: "test1",
-    imagePath:
-      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp9073908.jpg&f=1&nofb=1&ipt=999bd9c688fa536458f3ba164dd8fcda8cddbc90894697ad6b989a08eb211458",
+    imagePath: bmw1,
   },
 
   {
     imageName: "test2",
-    imagePath:
-      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp3543139.jpg&f=1&nofb=1&ipt=b5716bbc6451a0e5b3f986c40723a108d0c2d45091d7a5553c81e1027d1ca063",
+    imagePath: bmw2,
   },
 
   {
     imageName: "test3",
-    imagePath:
-      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F7a%2F84%2F39%2F7a843904932272b1b51250c5d9f98225.jpg&f=1&nofb=1&ipt=7ba607b6fea2a153a67f93e05858ed2c320c7ccfe5f428b0737a5797234a4a30",
+    imagePath: bmw3,
   },
 
   {
     imageName: "test4",
-    imagePath:
-      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F7a%2F84%2F39%2F7a843904932272b1b51250c5d9f98225.jpg&f=1&nofb=1&ipt=7ba607b6fea2a153a67f93e05858ed2c320c7ccfe5f428b0737a5797234a4a30",
+    imagePath: volkswagen1,
   },
 
   {
     imageName: "test5",
-    imagePath:
-      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F7a%2F84%2F39%2F7a843904932272b1b51250c5d9f98225.jpg&f=1&nofb=1&ipt=7ba607b6fea2a153a67f93e05858ed2c320c7ccfe5f428b0737a5797234a4a30",
+    imagePath: volkswagen2,
+  },
+  {
+    imageName: "test1",
+    imagePath: volkswagen3,
+  },
+
+  {
+    imageName: "test1",
+    imagePath: seat,
   },
 ];
 
@@ -40,7 +53,8 @@ export const Main = () => {
   return (
     <>
       <div className="w-screen">
-        <TitleBar title="Galeria" marginTop="mt-30" />
+        <SocialsBar />
+
         <Slider images={images} />
 
         <TitleBar title="O nas" marginTop="mt-10" />
