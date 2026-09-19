@@ -9,7 +9,7 @@ import bmw1 from "../img/photos/bmw1.jpg";
 import bmw2 from "../img/photos/bmw2.jpg";
 import bmw3 from "../img/photos/bmw3.jpg";
 import volkswagen1 from "../img/photos/volkswagen1.jpg";
-import volkswagen2 from "../img/photos/volkswagen1.jpg";
+import volkswagen2 from "../img/photos/volkswagen2.jpg";
 import volkswagen3 from "../img/photos/volkswagen3.jpg";
 import seat from "../img/photos/seat.jpg";
 
