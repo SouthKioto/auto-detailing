@@ -1,23 +1,45 @@
 import type { imagesProps } from "@/interfaces/imagesProps";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface sliderProps {
   images: imagesProps[];
   speed?: number;
 }
 
-const IMAGE_WIDTH = 500;
 const ASPECT_RATIO = 16 / 10;
-const IMAGE_HEIGHT = IMAGE_WIDTH / ASPECT_RATIO;
-const STEP = IMAGE_WIDTH * 0.8;
 const RANGE = 2.5;
 const SCALE_DROP = 0.25;
+
+const getImageWidth = (viewportWidth: number) => {
+  if (viewportWidth < 480) return viewportWidth * 0.7; // telefony
+  if (viewportWidth < 768) return viewportWidth * 0.55; // małe tablety
+  if (viewportWidth < 1024) return 380; // tablety
+  return 500;
+};
 
 export const Slider = ({ images, speed = 0.1 }: sliderProps) => {
   const total = images.length;
   const containerRef = useRef<HTMLDivElement | null>(null);
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
   const positionRef = useRef<number>(0);
+
+  const [imageWidth, setImageWidth] = useState<number>(() =>
+    typeof window !== "undefined" ? getImageWidth(window.innerWidth) : 500,
+  );
+
+  const imageHeight = imageWidth / ASPECT_RATIO;
+  const step = imageWidth * 0.8;
+
+  // Przelicz rozmiary przy zmianie szerokości ekranu
+  useEffect(() => {
+    const handleResize = () => {
+      setImageWidth(getImageWidth(window.innerWidth));
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -36,7 +58,7 @@ export const Slider = ({ images, speed = 0.1 }: sliderProps) => {
         const opacity = Math.max(0, 1 - distance / RANGE);
 
         el.style.transform = `translate(-50%, -50%) translateX(${
-          offset * STEP
+          offset * step
         }px) scale(${scale})`;
         el.style.opacity = String(opacity);
         el.style.zIndex = String(Math.round(100 - distance * 10));
@@ -85,13 +107,13 @@ export const Slider = ({ images, speed = 0.1 }: sliderProps) => {
       observer.disconnect();
       stop();
     };
-  }, [total, speed]);
+  }, [total, speed, step]);
 
   return (
     <div
       ref={containerRef}
-      className="relative w-full mt-20 overflow-hidden"
-      style={{ height: IMAGE_HEIGHT + 100 }}
+      className="relative w-full mt-12 sm:mt-16 md:mt-20 overflow-hidden"
+      style={{ height: imageHeight + 60 }}
     >
       {images.map((image, index) => (
         <div
@@ -101,8 +123,8 @@ export const Slider = ({ images, speed = 0.1 }: sliderProps) => {
           }}
           className="absolute top-1/2 left-1/2 rounded-lg bg-linear-to-r from-cyan-600 to-cyan-950 p-0.5"
           style={{
-            width: IMAGE_WIDTH,
-            height: IMAGE_HEIGHT,
+            width: imageWidth,
+            height: imageHeight,
             willChange: "transform, opacity",
           }}
         >
