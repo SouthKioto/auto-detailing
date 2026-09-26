@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 
 export const PhonePopup = ({
   isOpen,
@@ -26,11 +26,11 @@ export const PhonePopup = ({
   return (
     <div
       ref={ref}
-      className="absolute right-full top-1/2 -translate-y-1/2 mr-3 z-300 animate-in fade-in slide-in-from-right-2 duration-200"
+      className="absolute right-full top-1/2 -translate-y-1/2 mr-2 sm:mr-3 z-300 animate-in fade-in slide-in-from-right-2 duration-200"
     >
       <div className="relative rounded-lg bg-linear-to-b from-cyan-600 to-cyan-950 p-0.5 shadow-lg">
-        <div className="rounded-md bg-cyan-900 px-4 py-3 min-w-48">
-          <p className="text-xs text-cyan-400 font-semibold mb-2 uppercase tracking-wide">
+        <div className="rounded-md bg-cyan-900 px-3 py-2.5 sm:px-4 sm:py-3 w-40 sm:w-48">
+          <p className="text-[10px] sm:text-xs text-cyan-400 font-semibold mb-2 uppercase tracking-wide">
             Zadzwoń do nas
           </p>
           <div className="flex flex-col gap-2">
@@ -40,8 +40,10 @@ export const PhonePopup = ({
                 href={`tel:${number}`}
                 className="flex flex-col text-white hover:text-cyan-300 transition-colors"
               >
-                <span className="text-sm font-medium">{number}</span>
-                <span className="text-xs text-cyan-500">{label}</span>
+                <span className="text-xs sm:text-sm font-medium">{number}</span>
+                <span className="text-[10px] sm:text-xs text-cyan-500">
+                  {label}
+                </span>
               </a>
             ))}
           </div>
