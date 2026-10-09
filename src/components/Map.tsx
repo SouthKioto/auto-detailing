@@ -48,7 +48,9 @@ export const Map = () => {
             >
               <Popup autoClose={false} closeOnClick={false}>
                 <p>Tutaj nas znajdziesz :)</p>
-                <p className="font-bold underline">Stryszów 142, 34-146</p>
+                <a href={"https://maps.app.goo.gl/9DZGFR5u6A3zMkY87"} a>
+                  <p className="font-bold underline">Stryszów 142, 34-146</p>
+                </a>
               </Popup>
             </Marker>
           </MapContainer>
