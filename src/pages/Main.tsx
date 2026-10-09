@@ -83,7 +83,7 @@ const galleryImages: imagesProps[] = [
 export const Main = () => {
   return (
     <>
-      <div className="w-screen overflow-x-hidden">
+      <div className="w-full overflow-x-hidden">
         <SocialsBar />
         <Slider images={images} />
 
