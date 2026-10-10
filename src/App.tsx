@@ -1,6 +1,7 @@
 import "./index.css";
 
 import { Main } from "./pages/Main";
+import { Footer } from "./static/Footer";
 import { Header } from "./static/Header";
 
 export function App() {
@@ -8,6 +9,8 @@ export function App() {
     <>
       <Header />
       <Main />
+
+      <Footer />
     </>
   );
 }
