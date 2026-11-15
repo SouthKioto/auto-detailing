@@ -27,17 +27,17 @@ import type { imagesProps } from "@/interfaces/imagesProps";
 // Pary: najpierw zdjęcie "przed" (_1), potem "po" (_2).
 // Tytuł pary jest w pierwszym zdjęciu.
 const galleryImages: imagesProps[] = [
-  { imageName: "przed_po1_1", imagePath: przed_po1_1, title: "Czerwone auto" },
+  { imageName: "przed_po1_1", imagePath: przed_po1_1, title: "Škoda Fabia I" },
   { imageName: "przed_po1_2", imagePath: przed_po1_2 },
-  { imageName: "przed_po2_1", imagePath: przed_po2_1, title: "Niebieskie auto" },
+  { imageName: "przed_po2_1", imagePath: przed_po2_1, title: "Seat Ibiza IV" },
   { imageName: "przed_po2_2", imagePath: przed_po2_2 },
-  { imageName: "przed_po3_1", imagePath: przed_po3_1, title: "Czerwony hatchback" },
+  { imageName: "przed_po3_1", imagePath: przed_po3_1, title: "Seat Leon II" },
   { imageName: "przed_po3_2", imagePath: przed_po3_2 },
-  { imageName: "przed_po4_1", imagePath: przed_po4_1, title: "Granatowe auto" },
+  { imageName: "przed_po4_1", imagePath: przed_po4_1, title: "Seat Altea" },
   { imageName: "przed_po4_2", imagePath: przed_po4_2 },
-  { imageName: "przed_po5_1", imagePath: przed_po5_1, title: "Srebrne auto" },
+  { imageName: "przed_po5_1", imagePath: przed_po5_1, title: "Audi A3 8P" },
   { imageName: "przed_po5_2", imagePath: przed_po5_2 },
-  { imageName: "przed_po6_1", imagePath: przed_po6_1, title: "Czarne auto" },
+  { imageName: "przed_po6_1", imagePath: przed_po6_1, title: "Opel Astra H" },
   { imageName: "przed_po6_2", imagePath: przed_po6_2 },
 ];
 
