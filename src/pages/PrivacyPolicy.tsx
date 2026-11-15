@@ -28,8 +28,10 @@ export const PrivacyPolicy = () => {
         </p>
 
         <p>
-          <strong className="text-white">Strona nie używa plików cookies</strong>,
-          nie ma formularzy ani narzędzi analitycznych. Jeśli zadzwonisz lub
+          <strong className="text-white">
+            Strona nie używa plików cookies
+          </strong>
+          , nie ma formularzy ani narzędzi analitycznych. Jeśli zadzwonisz lub
           napiszesz, użyjemy Twojego numeru, maila i podanych informacji tylko
           po to, żeby odpowiedzieć i umówić wizytę (art. 6 ust. 1 lit. b RODO),
           i nie przekażemy ich nikomu.
@@ -44,11 +46,7 @@ export const PrivacyPolicy = () => {
 
         <p>
           Możesz poprosić o dostęp do swoich danych, ich poprawienie lub
-          usunięcie, a także złożyć skargę do Prezesa UODO (
-          <a href="https://uodo.gov.pl" target="_blank" rel="noopener noreferrer" className={ext}>
-            uodo.gov.pl
-          </a>
-          ).
+          usunięcie.
         </p>
       </article>
     </main>
