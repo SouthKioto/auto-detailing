@@ -1,3 +1,4 @@
+import { SocialsBar } from "@/components/SocialsBar";
 import { Gallery } from "./pages/Gallery";
 import "./index.css";
 
@@ -9,6 +10,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 export function App() {
   return (
     <>
+      <SocialsBar />
       <Header />
       <BrowserRouter>
         <Routes>

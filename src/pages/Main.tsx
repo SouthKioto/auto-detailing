@@ -58,7 +58,6 @@ export const Main = () => {
   return (
     <>
       <div className="w-full overflow-x-hidden">
-        <SocialsBar />
         <Slider images={images} />
 
         <TitleBar title="O nas" marginTop="mt-10" />
