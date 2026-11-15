@@ -39,7 +39,16 @@ export const PrivacyPolicy = () => {
 
         <p>
           Stronę hostuje Netlify (USA). Zapisuje on techniczne logi, np. adres
-          IP. Mapa dojazdu pobiera fragmenty mapy z OpenStreetMap, co również
+          IP.{" "}
+          <a
+            href="https://www.netlify.com/privacy/"
+            className={`${ext} break-all`}
+          >
+            Polityka prywatnosci Netlify
+          </a>{" "}
+          <br />
+          <br />
+          Mapa dojazdu pobiera fragmenty mapy z OpenStreetMap, co również
           przekazuje im Twój adres IP. Link „Wyznacz trasę” prowadzi do Google
           Maps i dopiero po kliknięciu obowiązuje tam polityka Google.
         </p>
