@@ -24,3 +24,6 @@ for (const output of result.outputs) {
     ` ${path.relative(process.cwd(), output.path)}  ${(output.size / 1024).toFixed(1)} KB`,
   );
 }
+
+// SPA fallback for Netlify: serve index.html for all routes (e.g. /gallery)
+await Bun.write(path.join(outdir, "_redirects"), "/*    /index.html   200\n");
