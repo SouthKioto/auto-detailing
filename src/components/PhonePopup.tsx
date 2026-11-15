@@ -1,30 +1,48 @@
 import { useRef, useEffect } from "react";
+import type { RefObject } from "react";
 
 export const PhonePopup = ({
+  id,
   isOpen,
   onClose,
   numbers,
+  anchorRef,
 }: {
+  id?: string;
   isOpen: boolean;
   onClose: () => void;
   numbers: { label: string; number: string }[];
+  /** Przycisk otwierający popup – kliknięcie w niego nie liczy się jako "poza" */
+  anchorRef?: RefObject<HTMLElement | null>;
 }) => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (!isOpen) return;
+
     const handleClickOutside = (e: MouseEvent) => {
-      if (ref.current && !ref.current.contains(e.target as Node)) {
-        onClose();
-      }
+      const target = e.target as Node;
+      if (ref.current?.contains(target)) return;
+      if (anchorRef?.current?.contains(target)) return;
+      onClose();
     };
-    if (isOpen) document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [isOpen, onClose]);
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleKey);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleKey);
+    };
+  }, [isOpen, onClose, anchorRef]);
 
   if (!isOpen) return null;
 
   return (
     <div
+      id={id}
       ref={ref}
       className="absolute right-full top-1/2 -translate-y-1/2 mr-2 sm:mr-3 z-300 animate-in fade-in slide-in-from-right-2 duration-200"
     >
@@ -37,7 +55,7 @@ export const PhonePopup = ({
             {numbers.map(({ label, number }) => (
               <a
                 key={number}
-                href={`tel:${number}`}
+                href={`tel:${number.replace(/\s/g, "")}`}
                 className="flex flex-col text-white hover:text-primary-300 transition-colors"
               >
                 <span className="text-xs sm:text-sm font-medium">{number}</span>

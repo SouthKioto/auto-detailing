@@ -68,6 +68,8 @@ export const Footer = () => {
           </p>
           <a
             href={INSTAGRAM}
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="Instagram"
             className="grid size-11 place-items-center rounded-[10px] border border-primary-600/40 text-[#E2E8EE] transition-colors hover:border-primary-400 hover:text-primary-300"
           >
@@ -125,7 +127,12 @@ export const Footer = () => {
       {/* Dolny pasek */}
       <div className="border-t border-primary-600/20">
         <div className="mx-auto flex min-h-15 max-w-[1180px] flex-wrap items-center justify-between gap-x-5 gap-y-1 px-4 text-[13px] text-[#7F92A3] sm:px-6">
-          <p className="m-0">© {new Date().getFullYear()} Auto Detailing Norbert Jarosz</p>
+          <p className="m-0 flex flex-wrap items-center gap-x-4 gap-y-1">
+            <span>© {new Date().getFullYear()} Auto Detailing Norbert Jarosz</span>
+            <a href="/polityka-prywatnosci" className="inline-flex min-h-11 items-center text-[#8FA0AF] no-underline hover:text-primary-300">
+              Polityka prywatności
+            </a>
+          </p>
           <a href="#top" className="inline-flex min-h-11 items-center gap-1.5 text-[#8FA0AF] no-underline hover:text-primary-300">
             Do góry
             <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">

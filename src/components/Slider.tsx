@@ -98,7 +98,7 @@ export const Slider = ({ images, speed = 0.1 }: sliderProps) => {
     };
 
     const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) start();
+      if (entry?.isIntersecting) start();
       else stop();
     });
     observer.observe(container);

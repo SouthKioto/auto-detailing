@@ -97,7 +97,7 @@ export const Header = () => {
               <a href={`mailto:${EMAIL}`} className="text-[#8FA0AF] no-underline hover:text-primary-300">
                 {EMAIL}
               </a>
-              <a href={INSTAGRAM} aria-label="Instagram" className="grid size-7 place-items-center text-[#8FA0AF] hover:text-primary-300">
+              <a href={INSTAGRAM} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="grid size-7 place-items-center text-[#8FA0AF] hover:text-primary-300">
                 <InstagramIcon />
               </a>
             </p>

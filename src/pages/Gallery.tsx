@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { TitleBar } from "@/components/TitleBar";
 
 import przed_po1_1 from "../img/przed_po/przed_po1_1.webp";
@@ -52,6 +53,10 @@ const additionalGalleryImages: imagesProps[] = [
 ];
 
 export const Gallery = () => {
+  useEffect(() => {
+    document.title = "Galeria realizacji – Auto Detailing Jarosz";
+  }, []);
+
   return (
     <main>
       <TitleBar title="Galeria" marginTop="mt-14" />

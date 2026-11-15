@@ -78,7 +78,7 @@ export const Pricing = () => {
         return (
           <li key={title} className="flex items-start gap-4 py-4">
             <div className="grid size-11 shrink-0 place-items-center rounded-lg bg-primary-600/15 text-primary-400 ring-1 ring-primary-600/30">
-              <img src={icon} />
+              <img src={icon} alt="" />
             </div>
 
             <div className="min-w-0 flex-1">

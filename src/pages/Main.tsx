@@ -1,57 +1,26 @@
 import { AboutUs } from "@/components/AboutUs";
 import { Map } from "@/components/Map";
 import { Slider } from "@/components/Slider";
-import { SocialsBar } from "@/components/SocialsBar";
 import { TitleBar } from "@/components/TitleBar";
 import type { imagesProps } from "@/interfaces/imagesProps";
 
-interface pairGalleryProps {
-  imageName: string;
-  imagePath: string;
-}
+import bmw1 from "../img/photos/bmw1.webp";
+import bmw2 from "../img/photos/bmw2.webp";
+import bmw3 from "../img/photos/bmw3.webp";
+import volkswagen1 from "../img/photos/volkswagen1.webp";
+import volkswagen2 from "../img/photos/volkswagen2.webp";
+import volkswagen3 from "../img/photos/volkswagen3.webp";
+import seat from "../img/photos/seat.webp";
 
-import bmw1 from "../img/photos/bmw1.jpg";
-import bmw2 from "../img/photos/bmw2.jpg";
-import bmw3 from "../img/photos/bmw3.jpg";
-import volkswagen1 from "../img/photos/volkswagen1.jpg";
-import volkswagen2 from "../img/photos/volkswagen2.jpg";
-import volkswagen3 from "../img/photos/volkswagen3.jpg";
-import seat from "../img/photos/seat.jpg";
-
+// imageName służy jako tekst alternatywny (alt) zdjęcia
 const images: imagesProps[] = [
-  {
-    imageName: "test1",
-    imagePath: bmw1,
-  },
-
-  {
-    imageName: "test2",
-    imagePath: bmw2,
-  },
-
-  {
-    imageName: "test3",
-    imagePath: bmw3,
-  },
-
-  {
-    imageName: "test4",
-    imagePath: volkswagen1,
-  },
-
-  {
-    imageName: "test5",
-    imagePath: volkswagen2,
-  },
-  {
-    imageName: "test1",
-    imagePath: volkswagen3,
-  },
-
-  {
-    imageName: "test1",
-    imagePath: seat,
-  },
+  { imageName: "BMW serii 1 po detailingu", imagePath: bmw1 },
+  { imageName: "BMW serii 1 – przód po detailingu", imagePath: bmw2 },
+  { imageName: "BMW serii 1 – tył po detailingu", imagePath: bmw3 },
+  { imageName: "Volkswagen Golf II po detailingu", imagePath: volkswagen1 },
+  { imageName: "Volkswagen Golf II – przód po detailingu", imagePath: volkswagen2 },
+  { imageName: "Volkswagen Golf IV po detailingu", imagePath: volkswagen3 },
+  { imageName: "Seat Leon po detailingu", imagePath: seat },
 ];
 
 export const Main = () => {
