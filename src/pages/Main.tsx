@@ -64,8 +64,10 @@ export const Main = () => {
         <TitleBar title="O nas" marginTop="mt-10" />
         <AboutUs />
 
-        <TitleBar title="Nasza lokalizacja" marginTop="mt-10" />
-        <Map />
+        <section id="dojazd" className="scroll-mt-24">
+          <TitleBar title="Nasza lokalizacja" marginTop="mt-10" />
+          <Map />
+        </section>
       </div>
     </>
   );
