@@ -17,10 +17,10 @@ export const Modal = ({ isOpen, onClose, title, children }: Props) => (
     isOpen={isOpen}
     onRequestClose={onClose}
     contentLabel={title}
-    className="mx-2 mt-10 max-w-lg rounded-xl bg-gradient-primary p-0.5 text-white shadow-2xl outline-none sm:mx-auto"
+    className="mx-2 mt-10 max-w-lg rounded-xl bg-linear-to-r from-cyan-600 to-cyan-950 p-0.5 text-white shadow-2xl outline-none sm:mx-auto"
     overlayClassName="fixed inset-0 z-200 bg-black/60 backdrop-blur-sm"
   >
-    <div className="flex max-h-[85vh] flex-col rounded-[10px] bg-navy">
+    <div className="flex max-h-[85vh] flex-col rounded-[10px] bg-[#122130]">
       {/* nagłówek: stała szerokość po bokach = tytuł jest idealnie wycentrowany */}
       <div className="grid shrink-0 grid-cols-[3rem_1fr_3rem] items-center border-b border-white/10 py-2">
         <div />

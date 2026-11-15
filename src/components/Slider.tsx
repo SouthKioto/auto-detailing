@@ -121,7 +121,7 @@ export const Slider = ({ images, speed = 0.1 }: sliderProps) => {
           ref={(el) => {
             itemRefs.current[index] = el;
           }}
-          className="absolute top-1/2 left-1/2 rounded-lg bg-gradient-primary p-0.5"
+          className="absolute top-1/2 left-1/2 rounded-lg bg-linear-to-r from-cyan-600 to-cyan-950 p-0.5"
           style={{
             width: imageWidth,
             height: imageHeight,

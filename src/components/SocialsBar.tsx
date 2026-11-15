@@ -24,10 +24,10 @@ export const SocialsBar = () => {
     >
       {/* Przycisk "<" */}
       <div
-        className="z-200 rounded-l-md bg-gradient-primary p-0.5 pr-0 cursor-pointer"
+        className="z-200 rounded-l-md bg-linear-to-r from-cyan-600 to-cyan-950 p-0.5 pr-0 cursor-pointer"
         onClick={handleIsOpen}
       >
-        <div className="px-1.5 py-2.5 sm:px-2 sm:py-3 rounded-l-md bg-primary-900">
+        <div className="px-1.5 py-2.5 sm:px-2 sm:py-3 rounded-l-md bg-cyan-900">
           <img
             src={!isOpen ? arrowLeft : arrowRight}
             className="w-4 h-4 sm:w-5 sm:h-5"
@@ -36,8 +36,8 @@ export const SocialsBar = () => {
       </div>
 
       {/* Lista ikon */}
-      <div className="z-100 rounded-full bg-gradient-primary p-0.5">
-        <div className="flex flex-col items-center pt-3 pb-3 p-2.5 sm:pt-4 sm:pb-4 sm:p-3 rounded-full bg-primary-900">
+      <div className="z-100 rounded-full bg-linear-to-r from-cyan-600 to-cyan-950 p-0.5">
+        <div className="flex flex-col items-center pt-3 pb-3 p-2.5 sm:pt-4 sm:pb-4 sm:p-3 rounded-full bg-cyan-900">
           <div className="font-bold mb-5 sm:mb-7 cursor-pointer">
             <img
               src={phone}

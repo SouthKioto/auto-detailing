@@ -1,7 +1,7 @@
 export const AboutUs = () => {
   return (
     <section className="flex justify-center">
-      <div className="max-w-3xl p-5 sm:p-8 md:p-10 text-muted">
+      <div className="max-w-3xl p-5 sm:p-8 md:p-10 text-gray-400">
         {" "}
         <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-4 sm:mb-6">
           {" "}

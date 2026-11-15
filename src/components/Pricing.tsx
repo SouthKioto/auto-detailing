@@ -46,7 +46,7 @@ const SIZES = Object.keys(CAR_LABELS) as CarSize[];
 const SinglePrice = ({ value }: { value: number }) => (
   <div className="whitespace-nowrap text-right">
     <span className="text-xs text-white/50">od </span>
-    <span className="text-lg font-semibold tabular-nums text-primary-300">
+    <span className="text-lg font-semibold tabular-nums text-cyan-300">
       {value}
     </span>
     <span className="text-sm text-white/70"> zł</span>
@@ -61,7 +61,7 @@ const CarPrices = ({ prices }: { prices: PricePerCar }) => (
         className="rounded-md bg-white/5 px-2 py-1.5 text-center ring-1 ring-white/10"
       >
         <div className="text-xs text-white/50">{CAR_LABELS[size]}</div>
-        <div className="text-sm font-semibold tabular-nums text-primary-300">
+        <div className="text-sm font-semibold tabular-nums text-cyan-300">
           od {prices[size]} zł
         </div>
       </div>
@@ -77,7 +77,7 @@ export const Pricing = () => {
 
         return (
           <li key={title} className="flex items-start gap-4 py-4">
-            <div className="grid size-11 shrink-0 place-items-center rounded-lg bg-primary-600/15 text-primary-400 ring-1 ring-primary-600/30">
+            <div className="grid size-11 shrink-0 place-items-center rounded-lg bg-cyan-600/15 text-cyan-400 ring-1 ring-cyan-600/30">
               <img src={icon} />
             </div>
 
