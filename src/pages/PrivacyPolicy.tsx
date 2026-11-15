@@ -20,7 +20,7 @@ export const PrivacyPolicy = () => {
 
         <p>
           Administratorem danych jest Norbert Jarosz, Stryszów 142, 34-146
-          Stryszów, kontakt:{" "}
+          Stryszów, kontakt: <br />
           <a href={`mailto:${EMAIL}`} className={`${ext} break-all`}>
             {EMAIL}
           </a>
@@ -39,7 +39,7 @@ export const PrivacyPolicy = () => {
 
         <p>
           Stronę hostuje Netlify (USA). Zapisuje on techniczne logi, np. adres
-          IP.{" "}
+          IP. <br />
           <a
             href="https://www.netlify.com/privacy/"
             className={`${ext} break-all`}
