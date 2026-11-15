@@ -1,20 +1,31 @@
 interface TitleBarProps {
   title: string;
   marginTop: string;
+  titlePosition?: string;
 }
 
-export const TitleBar = ({ title, marginTop }: TitleBarProps) => {
+export const TitleBar = ({
+  title,
+  marginTop,
+  titlePosition,
+}: TitleBarProps) => {
   return (
     <div
-      className={`flex w-full ${marginTop} items-center justify-center px-4`}
+      className={`flex w-full ${marginTop} items-center justify-center gap-2 sm:gap-3.5 px-4`}
     >
-      <div className="rounded-md w-[20%] sm:w-[30%] md:w-[35%] h-1 bg-linear-to-r from-cyan-600 to-cyan-950"></div>
+      <span
+        aria-hidden="true"
+        className="flex-[0_1_35%] h-1 rounded bg-gradient-fade-left"
+      ></span>
 
-      <p className="-skew-x-12 font-bold text-base sm:text-lg md:text-xl text-cyan-300 mx-2 sm:mx-3 text-center whitespace-nowrap">
+      <p className="-skew-x-12 font-extrabold text-base sm:text-lg md:text-2xl text-primary-300 text-center whitespace-nowrap">
         {title}
       </p>
 
-      <div className="rounded-md w-[20%] sm:w-[30%] md:w-[35%] h-1 bg-linear-to-r from-cyan-950 to-cyan-600"></div>
+      <span
+        aria-hidden="true"
+        className="flex-[0_1_35%] h-1 rounded bg-gradient-fade-right"
+      ></span>
     </div>
   );
 };
